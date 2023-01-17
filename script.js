@@ -9,7 +9,7 @@ var feedbackEl = document.querySelector("#feedback");
 
 // quiz state variables
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
+var time = questions.length * 20;
 var timerId;
 
 function startQuiz() {
