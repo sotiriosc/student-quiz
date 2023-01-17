@@ -13,11 +13,11 @@ var time = questions.length * 15;
 var timerId;
 
 function startQuiz() {
-  // hide start screen
+  // will set this portion hidden
   var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
 
-  // un-hide questions section
+  // will display hidden portion
   questionsEl.removeAttribute("class");
 
   // start timer
@@ -58,9 +58,9 @@ function getQuestion() {
 }
 
 function questionClick() {
-  // check if user guessed wrong
+  // verify if correct answer selected
   if (this.value !== questions[currentQuestionIndex].answer) {
-    // penalize time
+    // deducts time if incorrect
     time -= 5;
 
     if (time < 0) {
